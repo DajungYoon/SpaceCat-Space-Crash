@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceCat : MonoBehaviour
-
-
 {
     public float speed = 5.5f;
 
@@ -43,6 +42,21 @@ public class SpaceCat : MonoBehaviour
         }
 
         transform.position = pos;
+        
+
+        //changing to the next scene to build the puzzle
+        if (PuzzleCount.num_pieces == 6)
+        {
+            Debug.Log("All puzzles collected");
+
+            Invoke("NextScene", 2);
+        }
     }
-    
+
+    void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("puzzle");
+    }
+
 }

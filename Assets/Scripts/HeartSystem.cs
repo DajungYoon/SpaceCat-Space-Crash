@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeartSystem : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class HeartSystem : MonoBehaviour
     {
         if (num_hearts < 1)
         {
+            SceneManager.LoadScene("EndGame");
             Destroy(hearts[0].gameObject);
         }
         if (num_hearts < 2)
@@ -58,4 +60,6 @@ public class HeartSystem : MonoBehaviour
     public void TakeDamage(int damage) {
         life -= damage;
     }
+
+    
 }

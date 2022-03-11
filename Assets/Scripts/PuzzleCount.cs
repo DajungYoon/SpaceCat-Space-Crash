@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleCount : MonoBehaviour
 {
@@ -12,5 +13,11 @@ public class PuzzleCount : MonoBehaviour
     {
         // if the number of puzzle pieces == 6
             // we change the scene to the puzzle solving scene
+
+        if (num_pieces == 6) {
+            
+            SceneManager.LoadScene("puzzle");
+            
+        }
     }
 }

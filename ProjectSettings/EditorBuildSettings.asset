@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/space_cat.unity
     guid: e628b55194373478c9aaf948b5221a44
+  - enabled: 1
+    path: Assets/Scenes/puzzle.unity
+    guid: b394c35b2b2204c6aa13e5aac6165666
+  - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: 617b0de47f30d454b8f0e9b3b17d1295
+  - enabled: 1
+    path: Assets/Scenes/MissionComplete.unity
+    guid: d82886bd93904464ca00db53473c407f
   m_configObjects: {}
