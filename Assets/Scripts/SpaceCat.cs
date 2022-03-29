@@ -49,14 +49,14 @@ public class SpaceCat : MonoBehaviour
         {
             Debug.Log("All puzzles collected");
 
-            Invoke("NextScene", 2);
+            Invoke("NextScene", 5);
         }
     }
 
     void NextScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        SceneManager.LoadScene("puzzle");
+        SceneManager.LoadScene("Instruction");
     }
 
 }

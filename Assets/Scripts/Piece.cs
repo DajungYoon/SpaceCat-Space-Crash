@@ -4,9 +4,27 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
-
     private float amplitude = 0.2f;
     public float extraHeight = 3.75f;
+    private const float _dyingWaitTime = 0.75f;
+
+    public AudioSource collectPuzzle; 
+
+    void Start () {
+        collectPuzzle = GetComponent<AudioSource> ();
+    }
+    IEnumerator CollectAndDestroy(){
+        //this function is used for the Coroutine used in collision
+
+        //play the audio source
+        collectPuzzle.Play ();
+
+        //have a small delay before making the puzzle piece disappear
+        yield return new WaitForSeconds(_dyingWaitTime);
+
+         // the puzzle piece will disappear after playing the audio source
+        gameObject.SetActive(false);
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,11 +33,11 @@ public class Piece : MonoBehaviour
         // if the cat is touching the puzzle piece 
         if (cat != null)
         {
-            // the puzzle piece will disappear
-            gameObject.SetActive(false);
-
             // add another piece to the count
             PuzzleCount.num_pieces += 1;
+        
+            //play the audio source then destroy the object
+            StartCoroutine(CollectAndDestroy());
 
             Debug.Log("number of pieces = " + PuzzleCount.num_pieces);
         }

@@ -23,7 +23,7 @@ public class OxygenSystem : MonoBehaviour
         if (oxygen.slider.value > 0) {
 
             // decrease o2 level
-            oxygen.SetOxygenLevel((float) 0.00425F);
+            oxygen.SetOxygenLevel((float) 0.0077F);
         }
 
         // if o2 level is 0
