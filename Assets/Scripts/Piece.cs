@@ -6,12 +6,12 @@ public class Piece : MonoBehaviour
 {
     private float amplitude = 0.2f;
     public float extraHeight = 3.75f;
-    private const float _dyingWaitTime = 0.75f;
+    private const float _dyingWaitTime = 0.05f;
 
     public AudioSource collectPuzzle; 
 
     void Start () {
-        collectPuzzle = GetComponent<AudioSource> ();
+        collectPuzzle = GetComponent<AudioSource>();
     }
     IEnumerator CollectAndDestroy(){
         //this function is used for the Coroutine used in collision
@@ -22,7 +22,7 @@ public class Piece : MonoBehaviour
         //have a small delay before making the puzzle piece disappear
         yield return new WaitForSeconds(_dyingWaitTime);
 
-         // the puzzle piece will disappear after playing the audio source
+        // the puzzle piece will disappear after playing the audio source
         gameObject.SetActive(false);
     }
 
@@ -35,13 +35,14 @@ public class Piece : MonoBehaviour
         {
             // add another piece to the count
             PuzzleCount.num_pieces += 1;
-        
-            //play the audio source then destroy the object
+
             StartCoroutine(CollectAndDestroy());
 
             Debug.Log("number of pieces = " + PuzzleCount.num_pieces);
         }
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -52,4 +53,5 @@ public class Piece : MonoBehaviour
         float z = transform.position.z;
         transform.position = new Vector3(x, y, z);
     }
+
 }
