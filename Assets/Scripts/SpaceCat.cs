@@ -13,6 +13,7 @@ public class SpaceCat : MonoBehaviour
 
     void Start()
     {
+        PuzzleCount.num_pieces = 0;
         anim = GetComponent<Animator>();     
     }
 

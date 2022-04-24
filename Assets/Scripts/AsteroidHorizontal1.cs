@@ -11,6 +11,7 @@ public class AsteroidHorizontal1 : MonoBehaviour
 
     void Start()
     {
+        gameObject.SetActive(true);
         loseLife = GetComponent<AudioSource>();
     }
 
@@ -25,16 +26,7 @@ public class AsteroidHorizontal1 : MonoBehaviour
 
             // decrease the number of hearts 
             HeartSystem.num_hearts += -1;
-
-            StartCoroutine("GetInvulnerable");
         }
-    }
-
-    IEnumerator GetInvulnerable()
-    {
-        Physics2D.IgnoreLayerCollision(6, 7, true);
-        yield return new WaitForSeconds(1.5f);
-        Physics2D.IgnoreLayerCollision(6, 7, false);
     }
 
     void Update()

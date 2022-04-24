@@ -10,6 +10,7 @@ public class AsteroidHorizontal : MonoBehaviour
     public AudioSource loseLife; 
 
     void Start () {
+        gameObject.SetActive(true);
         loseLife = GetComponent<AudioSource> ();
     }
 
@@ -19,22 +20,13 @@ public class AsteroidHorizontal : MonoBehaviour
 
         if (cat != null) // if the cat is touching asteriod 
         {
-            //play the audio source
+            // play the audio source
             loseLife.Play ();
             
             // decrease the number of hearts 
             HeartSystem.num_hearts += -1;
-
-            StartCoroutine ("GetInvulnerable");
         }
     }
-
-    IEnumerator GetInvulnerable ()
-	{
-		Physics2D.IgnoreLayerCollision (6, 7, true);
-		yield return new WaitForSeconds (1.5f);
-		Physics2D.IgnoreLayerCollision (6, 7, false);
-	}
 
     void Update()
     {

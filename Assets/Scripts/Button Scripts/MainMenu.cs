@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     //this function will load in the next scene availble
     public void PlayGame(){
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("space_cat");
     }
 
     public void QuitGame (){
@@ -16,5 +16,10 @@ public class MainMenu : MonoBehaviour
         //only in unity
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+     public void Tutorial(){
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Tutorial");
     }
 }

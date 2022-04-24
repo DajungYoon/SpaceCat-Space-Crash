@@ -9,11 +9,14 @@ public class OxygenSystem : MonoBehaviour
     public float oxygenLevel;
     public OxygenTank oxygen;
 
+    public AudioSource audioSound;
+
     // Start is called before the first frame update
     void Start()
     {
         oxygenLevel = maxOxygen;
         oxygen.SetMaxOxygen(maxOxygen);
+        audioSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,7 +26,8 @@ public class OxygenSystem : MonoBehaviour
         if (oxygen.slider.value > 0) {
 
             // decrease o2 level
-            oxygen.SetOxygenLevel((float) 0.0077F);
+            oxygen.SetOxygenLevel((float) 0.023F);
+            
         }
 
         // if o2 level is 0
@@ -34,6 +38,8 @@ public class OxygenSystem : MonoBehaviour
 
             // set o2 back to full
             oxygen.slider.value = maxOxygen;
+
+            audioSound.Play ();
         }
     }
 }
