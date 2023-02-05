@@ -7,6 +7,6 @@ As a game designer, I was responsible for creating the unique elements of the ga
 Here is the build for Space Cat Space Crash: https://creative.caslab.queensu.ca/~GDP50/Builds/Alpha/  
 
 Developers:
-Dajung Yoon
-Liv Eliott
-Edwin Moreno
+- Dajung Yoon 
+- Liv Eliott 
+- Edwin Moreno
