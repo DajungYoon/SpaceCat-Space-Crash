@@ -4,7 +4,7 @@ This 2D platformer adventure puzzle game was collaboarated in my second year Gam
 
 As a game designer, I was responsible for creating the unique elements of the game, including the structure and objectives of each level. I designed the levels to be both challenging and entertaining for players. I implemented player control and gameplay functions, such as moving obstacles, time-based features, and a limited number of lives. These features added depth and strategy to the game, making it more engaging for players. Overall, my contributions helped to bring the game to life and create a truly memorable experience for players.
 
-Here is the build for Space Cat Space Crash: https://creative.caslab.queensu.ca/~GDP50/Builds/Alpha/  
+Here is the build for Space Cat Space Crash: https://dajungyoon.github.io//SpaceCat-Space-Crash/Builds/Alpha/index.html 
 
 Developers:
 - Dajung Yoon 
