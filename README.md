@@ -8,5 +8,5 @@ Here is the build for Space Cat Space Crash: https://dajungyoon.github.io//Space
 
 Developers:
 - Dajung Yoon 
-- Liv Eliott 
+- Liv Elliott 
 - Edwin Moreno
